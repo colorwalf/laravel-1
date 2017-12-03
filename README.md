@@ -34,6 +34,8 @@ In the latest update, I changed the base image to `php:alpine` for size optimizi
 ## Using
 
 ### With `docker`
+    docker run --rm -it -u $( id -u $USER ):$( id -g $USER )  -v $PWD:/var/www -p 80:80 hitalos/laravel /bin/bash
+    
     docker run --name <container_name> -d -v $PWD:/var/www -p 80:80 hitalos/laravel
 Where $PWD is the laravel installation folder.
 
